@@ -23,24 +23,24 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanelPrincipalGestion" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanelPrincipalConsultas" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanelPrincipalGestion" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanelPrincipalConsultas" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanelPrincipalGestion">
+    <Container class="javax.swing.JPanel" name="jPanelPrincipalConsultas">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder justification="2" title="Gesti&#xf3;n Pedidos">
+            <TitledBorder justification="2" title="Consulta Pedidos">
               <Font PropertyName="font" name="Segoe UI" size="36" style="1"/>
             </TitledBorder>
           </Border>
@@ -51,9 +51,8 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonVolver" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="936" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="942" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

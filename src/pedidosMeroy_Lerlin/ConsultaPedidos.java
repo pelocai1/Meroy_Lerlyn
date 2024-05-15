@@ -6,14 +6,14 @@ package pedidosMeroy_Lerlin;
 
 /**
  *
- * @author 1daw
+ * @author peloc
  */
-public class GestionPedidos extends javax.swing.JFrame {
+public class ConsultaPedidos extends javax.swing.JFrame {
 
     /**
-     * Creates new form GestionPedidos
+     * Creates new form ConsultaPedidos
      */
-    public GestionPedidos() {
+    public ConsultaPedidos() {
         initComponents();
     }
 
@@ -26,13 +26,13 @@ public class GestionPedidos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelPrincipalGestion = new javax.swing.JPanel();
+        jPanelPrincipalConsultas = new javax.swing.JPanel();
         jButtonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelPrincipalGestion.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelPrincipalGestion.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestión Pedidos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 36))); // NOI18N
+        jPanelPrincipalConsultas.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelPrincipalConsultas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consulta Pedidos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 36))); // NOI18N
 
         jButtonVolver.setText("Volver");
         jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
@@ -41,18 +41,17 @@ public class GestionPedidos extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanelPrincipalGestionLayout = new javax.swing.GroupLayout(jPanelPrincipalGestion);
-        jPanelPrincipalGestion.setLayout(jPanelPrincipalGestionLayout);
-        jPanelPrincipalGestionLayout.setHorizontalGroup(
-            jPanelPrincipalGestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPrincipalGestionLayout.createSequentialGroup()
-                .addContainerGap()
+        javax.swing.GroupLayout jPanelPrincipalConsultasLayout = new javax.swing.GroupLayout(jPanelPrincipalConsultas);
+        jPanelPrincipalConsultas.setLayout(jPanelPrincipalConsultasLayout);
+        jPanelPrincipalConsultasLayout.setHorizontalGroup(
+            jPanelPrincipalConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPrincipalConsultasLayout.createSequentialGroup()
                 .addComponent(jButtonVolver)
-                .addContainerGap(936, Short.MAX_VALUE))
+                .addGap(0, 942, Short.MAX_VALUE))
         );
-        jPanelPrincipalGestionLayout.setVerticalGroup(
-            jPanelPrincipalGestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPrincipalGestionLayout.createSequentialGroup()
+        jPanelPrincipalConsultasLayout.setVerticalGroup(
+            jPanelPrincipalConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPrincipalConsultasLayout.createSequentialGroup()
                 .addComponent(jButtonVolver)
                 .addGap(0, 642, Short.MAX_VALUE))
         );
@@ -61,11 +60,11 @@ public class GestionPedidos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelPrincipalGestion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelPrincipalConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelPrincipalGestion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelPrincipalConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -94,26 +93,26 @@ public class GestionPedidos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GestionPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GestionPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GestionPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GestionPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GestionPedidos().setVisible(true);
+                new ConsultaPedidos().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonVolver;
-    private javax.swing.JPanel jPanelPrincipalGestion;
+    private javax.swing.JPanel jPanelPrincipalConsultas;
     // End of variables declaration//GEN-END:variables
 }
