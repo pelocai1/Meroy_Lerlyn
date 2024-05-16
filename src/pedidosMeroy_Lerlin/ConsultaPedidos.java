@@ -7,12 +7,14 @@ package pedidosMeroy_Lerlin;
 import java.awt.Color;
 
 
+
 public class ConsultaPedidos extends javax.swing.JFrame {
 
     int xMouse, yMouse;
     
     public ConsultaPedidos() {
         initComponents();
+        
     }
 
     /**
@@ -27,7 +29,6 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jPanelPrincipalConsultas = new javax.swing.JPanel();
         jLabelLogo = new javax.swing.JLabel();
         jPanelMenu = new javax.swing.JPanel();
-        jLabelBuscarCodigo = new javax.swing.JLabel();
         jLabelInforma = new javax.swing.JLabel();
         jLabelPedidosRechazados = new javax.swing.JLabel();
         jLabelCambiarEstado = new javax.swing.JLabel();
@@ -36,10 +37,8 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jLabelCerrarX = new javax.swing.JLabel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelContenido = new javax.swing.JPanel();
-        jLabelIdProducto = new javax.swing.JLabel();
-        jTextFieldIntroducirId = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableRecibeConsultas = new javax.swing.JTable();
         jLabelIdPedido = new javax.swing.JLabel();
         jLabelEstado = new javax.swing.JLabel();
         jLabelMostrarFechaPedido = new javax.swing.JLabel();
@@ -51,6 +50,9 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jLabelFechaEntrega1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPaneMostrarComentarios = new javax.swing.JTextPane();
+        jPanelActivaBuscar = new javax.swing.JPanel();
+        jLabelIdProducto = new javax.swing.JLabel();
+        jTextFieldIntroducirId = new javax.swing.JTextField();
         jButtonBuscarPedido = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,22 +68,6 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jPanelPrincipalConsultas.add(jLabelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 160, 90));
 
         jPanelMenu.setBackground(new java.awt.Color(141, 179, 52));
-
-        jLabelBuscarCodigo.setBackground(new java.awt.Color(141, 179, 52));
-        jLabelBuscarCodigo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelBuscarCodigo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelBuscarCodigo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelBuscarCodigo.setText("Buscar por ID");
-        jLabelBuscarCodigo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabelBuscarCodigo.setOpaque(true);
-        jLabelBuscarCodigo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelBuscarCodigoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelBuscarCodigoMouseExited(evt);
-            }
-        });
 
         jLabelInforma.setBackground(new java.awt.Color(141, 179, 52));
         jLabelInforma.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -154,17 +140,18 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jPanelMenu.setLayout(jPanelMenuLayout);
         jPanelMenuLayout.setHorizontalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelBuscarCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabelInforma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabelPedidosRechazados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabelCambiarEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabelVolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabelInforma, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelPedidosRechazados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(jLabelCambiarEstado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelVolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanelMenuLayout.setVerticalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuLayout.createSequentialGroup()
-                .addComponent(jLabelBuscarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelInforma, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelPedidosRechazados, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,7 +159,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
                 .addComponent(jLabelCambiarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 246, Short.MAX_VALUE))
+                .addGap(0, 302, Short.MAX_VALUE))
         );
 
         jPanelPrincipalConsultas.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 190, 520));
@@ -237,11 +224,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
 
         jPanelContenido.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabelIdProducto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabelIdProducto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelIdProducto.setText("ID Pedido:");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableRecibeConsultas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -258,13 +241,13 @@ public class ConsultaPedidos extends javax.swing.JFrame {
                 "Linea", "ID Producto", "Cantidad", "Precio UD.", "ID Pedido"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("Linea");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("ID Producto");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Cantidad");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("Precio UD.");
-            jTable1.getColumnModel().getColumn(4).setHeaderValue("ID Pedido");
+        jScrollPane1.setViewportView(jTableRecibeConsultas);
+        if (jTableRecibeConsultas.getColumnModel().getColumnCount() > 0) {
+            jTableRecibeConsultas.getColumnModel().getColumn(0).setHeaderValue("Linea");
+            jTableRecibeConsultas.getColumnModel().getColumn(1).setHeaderValue("ID Producto");
+            jTableRecibeConsultas.getColumnModel().getColumn(2).setHeaderValue("Cantidad");
+            jTableRecibeConsultas.getColumnModel().getColumn(3).setHeaderValue("Precio UD.");
+            jTableRecibeConsultas.getColumnModel().getColumn(4).setHeaderValue("ID Pedido");
         }
 
         jLabelIdPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -301,84 +284,86 @@ public class ConsultaPedidos extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jTextPaneMostrarComentarios);
 
+        jPanelActivaBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelActivaBuscar.setMinimumSize(new java.awt.Dimension(674, 58));
+
+        jLabelIdProducto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelIdProducto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelIdProducto.setText("ID Pedido:");
+
         jButtonBuscarPedido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButtonBuscarPedido.setText("Buscar");
         jButtonBuscarPedido.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout jPanelActivaBuscarLayout = new javax.swing.GroupLayout(jPanelActivaBuscar);
+        jPanelActivaBuscar.setLayout(jPanelActivaBuscarLayout);
+        jPanelActivaBuscarLayout.setHorizontalGroup(
+            jPanelActivaBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelActivaBuscarLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabelIdProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jTextFieldIntroducirId, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(jButtonBuscarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(152, Short.MAX_VALUE))
+        );
+        jPanelActivaBuscarLayout.setVerticalGroup(
+            jPanelActivaBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelActivaBuscarLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(jPanelActivaBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelActivaBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelIdProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldIntroducirId, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonBuscarPedido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanelContenidoLayout = new javax.swing.GroupLayout(jPanelContenido);
         jPanelContenido.setLayout(jPanelContenidoLayout);
         jPanelContenidoLayout.setHorizontalGroup(
             jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-            .addGroup(jPanelContenidoLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                                .addComponent(jLabelFechaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelMostrarFechaEntrega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                                .addComponent(jLabelIdPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                                .addComponent(jLabelIdProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextFieldIntroducirId, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelFechaEntrega1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
+                    .addGroup(jPanelContenidoLayout.createSequentialGroup()
+                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelFechaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelIdPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelMostrarFechaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
                         .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelContenidoLayout.createSequentialGroup()
                                 .addComponent(jLabelFechaPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelMostrarFechaPedido, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelMostrarFechaPedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanelContenidoLayout.createSequentialGroup()
                                 .addComponent(jLabelFechaEstimada, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelMostrarFechaEstimada, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
-                            .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addComponent(jButtonBuscarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                        .addComponent(jLabelFechaEntrega1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2)))
-                .addGap(35, 35, 35))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelMostrarFechaEstimada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(61, 61, 61))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContenidoLayout.createSequentialGroup()
+                .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelActivaBuscar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
         jPanelContenidoLayout.setVerticalGroup(
             jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelContenidoLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanelActivaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelIdProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldIntroducirId, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContenidoLayout.createSequentialGroup()
-                        .addComponent(jButtonBuscarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelIdPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelFechaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelMostrarFechaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelContenidoLayout.createSequentialGroup()
-                                .addComponent(jLabelFechaEntrega1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 46, Short.MAX_VALUE))
-                            .addComponent(jScrollPane2))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelContenidoLayout.createSequentialGroup()
                         .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelFechaPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -386,8 +371,21 @@ public class ConsultaPedidos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelFechaEstimada, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelMostrarFechaEstimada, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jLabelMostrarFechaEstimada, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelContenidoLayout.createSequentialGroup()
+                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelFechaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelMostrarFechaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelIdPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelFechaEntrega1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -441,14 +439,6 @@ public class ConsultaPedidos extends javax.swing.JFrame {
        jLabelCerrarX.setBackground(Color.white);
        jLabelCerrarX.setForeground(Color.BLACK);
     }//GEN-LAST:event_jLabelCerrarXMouseExited
-
-    private void jLabelBuscarCodigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBuscarCodigoMouseEntered
-        jLabelBuscarCodigo.setBackground(new Color(163, 207,60));
-    }//GEN-LAST:event_jLabelBuscarCodigoMouseEntered
-
-    private void jLabelBuscarCodigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBuscarCodigoMouseExited
-        jLabelBuscarCodigo.setBackground(new Color(141, 179,52));
-    }//GEN-LAST:event_jLabelBuscarCodigoMouseExited
 
     private void jLabelInformaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelInformaMouseEntered
         jLabelInforma.setBackground(new Color(163, 207,60));
@@ -519,7 +509,6 @@ public class ConsultaPedidos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBuscarPedido;
-    private javax.swing.JLabel jLabelBuscarCodigo;
     private javax.swing.JLabel jLabelCambiarEstado;
     private javax.swing.JLabel jLabelCerrarX;
     private javax.swing.JLabel jLabelEstado;
@@ -537,13 +526,14 @@ public class ConsultaPedidos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPedidosRechazados;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelVolver;
+    private javax.swing.JPanel jPanelActivaBuscar;
     private javax.swing.JPanel jPanelCerrar;
     private javax.swing.JPanel jPanelContenido;
     private javax.swing.JPanel jPanelMenu;
     private javax.swing.JPanel jPanelPrincipalConsultas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTableRecibeConsultas;
     private javax.swing.JTextField jTextFieldIntroducirId;
     private javax.swing.JTextPane jTextPaneMostrarComentarios;
     // End of variables declaration//GEN-END:variables
