@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="locationByPlatform" type="boolean" value="true"/>
@@ -302,20 +302,20 @@
                       <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabelFechaEntrega1" min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="jLabelComentarios" min="-2" pref="111" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jScrollPane2" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabelEstado" min="-2" pref="111" max="-2" attributes="0"/>
                                   <Component id="jLabelFechaEntrega" min="-2" pref="111" max="-2" attributes="0"/>
-                                  <Component id="jLabelIdPedido" min="-2" pref="111" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelMostrarFechaEntrega" min="-2" pref="165" max="-2" attributes="0"/>
-                                  <Component id="jLabelEstado" min="-2" pref="165" max="-2" attributes="0"/>
+                                  <Component id="jLabelMostrarEstado" min="-2" pref="165" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -351,31 +351,31 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelFechaPedido" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelMostrarFechaPedido" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jLabelFechaPedido" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelFechaEstimada" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelMostrarFechaEstimada" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jLabelFechaEstimada" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelFechaEntrega" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                                   <Component id="jLabelEstado" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jLabelMostrarEstado" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelMostrarFechaEntrega" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jLabelIdPedido" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jLabelFechaEntrega" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelFechaEntrega1" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="jLabelComentarios" min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="jScrollPane2" pref="69" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -398,36 +398,36 @@
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="5" rowCount="10">
                         <Column editable="true" title="Linea" type="java.lang.Object"/>
-                        <Column editable="true" title="ID Producto" type="java.lang.Object"/>
+                        <Column editable="true" title="Cod. Producto" type="java.lang.Object"/>
                         <Column editable="true" title="Cantidad" type="java.lang.Object"/>
                         <Column editable="true" title="Precio UD." type="java.lang.Object"/>
-                        <Column editable="true" title="ID Pedido" type="java.lang.Object"/>
+                        <Column editable="true" title="Cod. Pedido" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title value="Linea"/>
+                          <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title value="ID Producto"/>
+                          <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title value="Cantidad"/>
+                          <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title value="Precio UD."/>
+                          <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title value="ID Pedido"/>
+                          <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
@@ -440,16 +440,16 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabelIdPedido">
+            <Component class="javax.swing.JLabel" name="jLabelFechaEntrega">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Estado:"/>
+                <Property name="text" type="java.lang.String" value="Fecha Entrega:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelEstado">
+            <Component class="javax.swing.JLabel" name="jLabelMostrarEstado">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -491,13 +491,13 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelFechaEntrega">
+            <Component class="javax.swing.JLabel" name="jLabelEstado">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Fecha Entrega:"/>
+                <Property name="text" type="java.lang.String" value="Estado:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelMostrarFechaEntrega">
@@ -508,7 +508,7 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelFechaEntrega1">
+            <Component class="javax.swing.JLabel" name="jLabelComentarios">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -543,7 +543,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Component id="jLabelIdProducto" min="-2" pref="111" max="-2" attributes="0"/>
+                          <Component id="jLabelIdPedido" min="-2" pref="111" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jTextFieldIntroducirId" min="-2" pref="165" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
@@ -558,7 +558,7 @@
                           <EmptySpace pref="14" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelIdProducto" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jLabelIdPedido" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                                   <Component id="jTextFieldIntroducirId" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jButtonBuscarPedido" alignment="1" min="-2" pref="35" max="-2" attributes="0"/>
@@ -569,7 +569,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabelIdProducto">
+                <Component class="javax.swing.JLabel" name="jLabelIdPedido">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="14" style="1"/>
@@ -579,6 +579,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextFieldIntroducirId">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="4"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonBuscarPedido">
                   <Properties>
@@ -590,6 +593,9 @@
                       <Color id="Hand Cursor"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBuscarPedidoActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
