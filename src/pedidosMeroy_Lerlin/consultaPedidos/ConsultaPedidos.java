@@ -216,7 +216,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
             int filasAfectadas = statement.executeUpdate();
 
             // Verificar si ambas actualizaciones fueron exitosas
-            if (filasAfectadas > 0 ) {
+            if (filasAfectadas > 0) {
                 JOptionPane.showMessageDialog(null, "Pedido actualizado correctamente en la base de datos.", "Actualización exitosa", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(null, "No se pudo actualizar el pedido en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -229,10 +229,126 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         }
     }
 
+    public void actualizarStockProductosRechazados(int codigoPedido) {
+        Connection conn = Conexion.getConnection();
+        PreparedStatement statementDetalle = null;
+        PreparedStatement statementProducto = null;
+
+        try {
+            // Obtener detalles del pedido rechazado
+            String consultaDetalle = "SELECT codigo_producto, cantidad FROM detalle_pedido WHERE codigo_pedido = ?";
+            statementDetalle = conn.prepareStatement(consultaDetalle);
+            statementDetalle.setInt(1, codigoPedido);
+            ResultSet resultSetDetalle = statementDetalle.executeQuery();
+
+            while (resultSetDetalle.next()) {
+                String codigoProducto = resultSetDetalle.getString("codigo_producto");
+                int cantidad = resultSetDetalle.getInt("cantidad");
+
+                // Actualizar el stock del producto
+                String consultaProducto = "UPDATE producto SET cantidad_en_stock = cantidad_en_stock + ? WHERE codigo_producto = ?";
+                statementProducto = conn.prepareStatement(consultaProducto);
+                statementProducto.setInt(1, cantidad);
+                statementProducto.setString(2, codigoProducto);
+                statementProducto.executeUpdate();
+            }
+
+            JOptionPane.showMessageDialog(null, "Stock actualizado correctamente.", "Actualización exitosa", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error al actualizar el stock: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            try {
+                if (statementDetalle != null) {
+                    statementDetalle.close();
+                }
+                if (statementProducto != null) {
+                    statementProducto.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void actualizarEstadoPedido(int codigoPedido, String nuevoEstado) {
+        Connection conn = Conexion.getConnection();
+
+        try {
+            // Obtener el estado actual del pedido
+            String consultaEstadoActual = "SELECT estado FROM pedido WHERE codigo_pedido = ?";
+            PreparedStatement statementEstadoActual = conn.prepareStatement(consultaEstadoActual);
+            statementEstadoActual.setInt(1, codigoPedido);
+            ResultSet resultSetEstado = statementEstadoActual.executeQuery();
+
+            if (resultSetEstado.next()) {
+                String estadoActual = resultSetEstado.getString("estado");
+
+                if (estadoActual.equals("Pendiente")) {
+                    String consulta = "UPDATE pedido SET estado = ?, fecha_entrega = ? WHERE codigo_pedido = ?";
+                    PreparedStatement statement = conn.prepareStatement(consulta);
+                    statement.setString(1, nuevoEstado);
+
+                    if (nuevoEstado.equals("Entregado")) {
+                        java.sql.Date fechaActual = java.sql.Date.valueOf(LocalDate.now());
+                        statement.setDate(2, fechaActual);
+                    } else {
+                        statement.setNull(2, java.sql.Types.DATE);
+                    }
+
+                    statement.setInt(3, codigoPedido);
+
+                    int filasAfectadas = statement.executeUpdate();
+                    if (filasAfectadas > 0) {
+                        JOptionPane.showMessageDialog(null, "Estado del pedido actualizado correctamente en la base de datos.", "Actualización exitosa", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "No se pudo actualizar el estado del pedido en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+            }
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error al actualizar el estado del pedido: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private String obtenerEstadoPedido(int codigoPedido) {
+        Connection conn = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        String estado = null;
+
+        try {
+            conn = Conexion.getConnection();
+            String consulta = "SELECT estado FROM pedido WHERE codigo_pedido = ?";
+            statement = conn.prepareStatement(consulta);
+            statement.setInt(1, codigoPedido);
+            resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                estado = resultSet.getString("estado");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error al obtener el estado del pedido: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            try {
+                if (resultSet != null) {
+                    resultSet.close();
+                }
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return estado;
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanelPrincipal = new javax.swing.JPanel();
         jPanelTop = new javax.swing.JPanel();
@@ -572,12 +688,11 @@ public class ConsultaPedidos extends javax.swing.JFrame {
             .addGroup(jPanelCentralTopLayout.createSequentialGroup()
                 .addGroup(jPanelCentralTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabelEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanelCentralTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelCodcliente, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelMostrarCodCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelCentralTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelCodPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelMostrarCodPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelCentralTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelMostrarCodCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelCodcliente, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelMostrarCodPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelCodPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxEstado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelCentralTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -706,18 +821,46 @@ public class ConsultaPedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelBuscarMouseClicked
 
     private void jComboBoxEstadoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxEstadoItemStateChanged
-        if (jComboBoxEstado.getSelectedIndex() == 2) {
-            String codigo = jTextFieldIntroduceID.getText().trim();
-            IdPedido = Integer.parseInt(codigo);
-            devolverStockProductos(IdPedido);
-        } else if (jComboBoxEstado.getSelectedIndex() == 1) {
-            String codigo = jTextFieldIntroduceID.getText().trim();
-            IdPedido = Integer.parseInt(codigo);
-            LocalDate fechaActual = LocalDate.now();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // Define el formato deseado para la fecha
-            String fechaFormateada = fechaActual.format(formatter); // Formatea la fecha actual según el formato definido
-            jLabelMostrarFechaEntrega.setText(fechaFormateada);
-            actualizarPedidoEntregado(IdPedido);
+        if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED) {
+            try {
+                String codigo = jTextFieldIntroduceID.getText().trim();
+                if (!codigo.isEmpty() && codigo.matches("\\d+")) {
+                    int IdPedido = Integer.parseInt(codigo);
+                    String selectedState = (String) jComboBoxEstado.getSelectedItem();
+
+                    // Verificar el estado actual del pedido antes de realizar cualquier actualización
+                    String estadoActual = obtenerEstadoPedido(IdPedido);
+
+                    if (estadoActual == null) {
+                        JOptionPane.showMessageDialog(null, "Pedido no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }
+                    if (estadoActual.equals("Pendiente")) {
+                        if (selectedState.equals("Rechazado")) {
+                            actualizarStockProductosRechazados(IdPedido);
+                            actualizarEstadoPedido(IdPedido, "Rechazado");
+                            cargaDatos();
+                            cargarDetallesPedido();
+                            buscarIdPedido(IdPedido);
+                            buscarIdPedidoDetalles(IdPedido);
+                        } else if (selectedState.equals("Entregado")) {
+                            LocalDate fechaActual = LocalDate.now();
+                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                            String fechaFormateada = fechaActual.format(formatter);
+                            jLabelMostrarFechaEntrega.setText(fechaFormateada);
+                            actualizarEstadoPedido(IdPedido, "Entregado");
+                            cargaDatos();
+                            cargarDetallesPedido();
+                            buscarIdPedido(IdPedido);
+                            buscarIdPedidoDetalles(IdPedido);
+                        }
+                    }
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "El ID de pedido debe ser un número.", "Entrada inválida", JOptionPane.WARNING_MESSAGE);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Error al procesar el cambio de estado: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
     }//GEN-LAST:event_jComboBoxEstadoItemStateChanged
 

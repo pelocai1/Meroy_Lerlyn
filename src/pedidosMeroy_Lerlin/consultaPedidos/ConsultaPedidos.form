@@ -405,14 +405,12 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jLabelEstado" alignment="0" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelCodcliente" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelMostrarCodCliente" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="jLabelCodcliente" min="-2" pref="28" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelCodPedido" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="jLabelMostrarCodPedido" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jLabelMostrarCodPedido" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jLabelCodPedido" min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jComboBoxEstado" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
