@@ -1,6 +1,7 @@
 
 package pedidosMeroy_Lerlin;
 
+import pedidosMeroy_Lerlin.consultaPedidos.ConsultaPedidos;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JPanel;
@@ -12,7 +13,7 @@ public class PortadaPedidos extends javax.swing.JFrame {
     
     public PortadaPedidos() {
         initComponents();
-        
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
