@@ -94,7 +94,6 @@ public class InformePedidos extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(865, 607));
         setMinimumSize(new java.awt.Dimension(865, 607));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(865, 607));
         setResizable(false);
 
         jPanelPrincipal.setMaximumSize(new java.awt.Dimension(865, 607));
