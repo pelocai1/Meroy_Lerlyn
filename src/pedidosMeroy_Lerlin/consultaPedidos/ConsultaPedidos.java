@@ -166,7 +166,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
 
     public void buscarIdPedidoDetalles(int codigoPedido) {
         DefaultTableModel model = (DefaultTableModel) jTableRecibeConsultas.getModel();
-        model.setRowCount(0); // Limpiar la tabla antes de agregar nuevas filas
+        model.setRowCount(0); 
 
         DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
         rightRenderer.setHorizontalAlignment(DefaultTableCellRenderer.CENTER);
@@ -215,7 +215,6 @@ public class ConsultaPedidos extends javax.swing.JFrame {
             statement.setInt(2, codigoPedido);
             int filasAfectadas = statement.executeUpdate();
 
-            // Verificar si ambas actualizaciones fueron exitosas
             if (filasAfectadas > 0) {
                 JOptionPane.showMessageDialog(null, "Pedido actualizado correctamente en la base de datos.", "Actualización exitosa", JOptionPane.INFORMATION_MESSAGE);
             } else {
@@ -516,6 +515,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jLabelBtnInforme.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBtnInforme.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnInforme.setText("Informe Pedidos");
+        jLabelBtnInforme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnInforme.setOpaque(true);
         jLabelBtnInforme.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -534,6 +534,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jLabelBtnRechazados.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBtnRechazados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnRechazados.setText("Informe Rechazados");
+        jLabelBtnRechazados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnRechazados.setOpaque(true);
         jLabelBtnRechazados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -552,6 +553,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jLabelBtnVolver.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBtnVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnVolver.setText("Volver");
+        jLabelBtnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnVolver.setOpaque(true);
         jLabelBtnVolver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -867,37 +869,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ConsultaPedidos().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBoxEstado;
