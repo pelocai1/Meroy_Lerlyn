@@ -118,6 +118,7 @@ public class InformePedidos extends javax.swing.JFrame {
         jLabelBtnCerrar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelBtnCerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnCerrar.setText("X");
+        jLabelBtnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnCerrar.setOpaque(true);
         jLabelBtnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

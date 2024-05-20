@@ -413,6 +413,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jLabelBtnCerrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelBtnCerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnCerrar.setText("X");
+        jLabelBtnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnCerrar.setOpaque(true);
         jLabelBtnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -449,6 +450,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
         jLabelBuscar.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBuscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBuscar.setText("Buscar");
+        jLabelBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBuscar.setOpaque(true);
         jLabelBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

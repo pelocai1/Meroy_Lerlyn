@@ -124,6 +124,7 @@ public class PedidosRechazados extends javax.swing.JFrame {
         jLabelBtnCerrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelBtnCerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnCerrar.setText("X");
+        jLabelBtnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnCerrar.setOpaque(true);
         jLabelBtnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -173,6 +174,7 @@ public class PedidosRechazados extends javax.swing.JFrame {
         jLabelBtnInformeRechazados.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBtnInformeRechazados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnInformeRechazados.setText("Informe Rechazados");
+        jLabelBtnInformeRechazados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnInformeRechazados.setMaximumSize(new java.awt.Dimension(141, 45));
         jLabelBtnInformeRechazados.setMinimumSize(new java.awt.Dimension(141, 45));
         jLabelBtnInformeRechazados.setOpaque(true);
@@ -194,6 +196,7 @@ public class PedidosRechazados extends javax.swing.JFrame {
         jLabelBtnGuardarInforme.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBtnGuardarInforme.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnGuardarInforme.setText("Guardar Informe");
+        jLabelBtnGuardarInforme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnGuardarInforme.setMaximumSize(new java.awt.Dimension(141, 45));
         jLabelBtnGuardarInforme.setMinimumSize(new java.awt.Dimension(141, 45));
         jLabelBtnGuardarInforme.setOpaque(true);
@@ -215,6 +218,7 @@ public class PedidosRechazados extends javax.swing.JFrame {
         jLabelBtnVolver.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBtnVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBtnVolver.setText("Volver");
+        jLabelBtnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBtnVolver.setMaximumSize(new java.awt.Dimension(141, 45));
         jLabelBtnVolver.setMinimumSize(new java.awt.Dimension(141, 45));
         jLabelBtnVolver.setOpaque(true);

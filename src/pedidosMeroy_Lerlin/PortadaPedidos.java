@@ -95,6 +95,7 @@ public class PortadaPedidos extends javax.swing.JFrame {
         jLabelExitPortada.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelExitPortada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelExitPortada.setText("X");
+        jLabelExitPortada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelExitPortada.setOpaque(true);
         jLabelExitPortada.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
