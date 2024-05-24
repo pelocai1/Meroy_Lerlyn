@@ -5,6 +5,7 @@ import pedidosMeroy_Lerlin.consultaPedidos.ConsultaPedidos;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JPanel;
+import pedidosMeroy_Lerlin.gestioPedidosExtra.GestionPedidos;
 
 
 public class PortadaPedidos extends javax.swing.JFrame {

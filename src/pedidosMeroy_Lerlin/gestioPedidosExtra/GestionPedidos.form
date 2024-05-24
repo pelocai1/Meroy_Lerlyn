@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+    </Property>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[865, 607]"/>
+    </Property>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[865, 607]"/>
+    </Property>
+    <Property name="undecorated" type="boolean" value="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanelPrincipal" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanelPrincipal" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanelPrincipal">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[865, 607]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[865, 607]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[865, 607]"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanelTop">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jPanelTopMouseDragged"/>
+            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelTopMousePressed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="First"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelLogo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelTitulo" pref="661" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelBtnCerrar" min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabelLogo" pref="100" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabelBtnCerrar" pref="39" max="32767" attributes="0"/>
+                          <Component id="jLabelTitulo" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabelLogo">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/pedidosMeroy_Lerlin/imagenes/meroyLerlin.png"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelBtnCerrar">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="X"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
+                <Property name="opaque" type="boolean" value="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnCerrarMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnCerrarMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnCerrarMouseExited"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelTitulo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="GESTI&#xd3;N PEDIDOS"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanelLeft">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="34" green="b3" red="8d" type="rgb"/>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="Before"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabelBtnNuevoPedido" alignment="0" pref="158" max="32767" attributes="0"/>
+                  <Component id="jLabelBtnModificar" alignment="0" pref="158" max="32767" attributes="0"/>
+                  <Component id="jLabelBtnEliminar" alignment="0" pref="158" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelBtnNuevoPedido" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelBtnModificar" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelBtnEliminar" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="387" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabelBtnNuevoPedido">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="34" green="b3" red="8d" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Nuevo"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+                <Property name="opaque" type="boolean" value="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnNuevoPedidoMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnNuevoPedidoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnNuevoPedidoMouseExited"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelBtnModificar">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="34" green="b3" red="8d" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Modificar"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+                <Property name="opaque" type="boolean" value="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnModificarMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnModificarMouseExited"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelBtnEliminar">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="34" green="b3" red="8d" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+                <Property name="opaque" type="boolean" value="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[140, 25]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnEliminarMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnEliminarMouseExited"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanelCenter">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="Center"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanelCenterTop">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                  <BorderConstraints direction="Center"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabelBtnAnadirProducto" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="jLabelBtnGenerarPedido" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabelProducto" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jComboBoxProducto" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jLabelCantidad" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jComboBoxCantidad" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Component id="jLabelCodCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextFieldIntroducirCliente" min="-2" pref="87" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelComentarios" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextFieldIntroducirComentario" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelCodigo" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabelMostrarCodigo" min="-2" pref="87" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabelFechaPedido" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabelMostrarFecha" min="-2" pref="95" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabelEstado" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabelMostrarEstado" min="-2" pref="101" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="0" pref="66" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabelMostrarEstado" max="32767" attributes="0"/>
+                              <Component id="jLabelEstado" max="32767" attributes="0"/>
+                              <Component id="jLabelFechaPedido" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelCodigo" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="jLabelMostrarCodigo" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabelMostrarFecha" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabelComentarios" max="32767" attributes="0"/>
+                              <Component id="jTextFieldIntroducirComentario" pref="34" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabelProducto" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="jComboBoxProducto" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="jLabelCantidad" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="jLabelCodCliente" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="jTextFieldIntroducirCliente" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jComboBoxCantidad" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabelBtnGenerarPedido" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="jLabelBtnAnadirProducto" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="46" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="250" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabelCodigo">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="C&#xf3;digo Pedido:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelMostrarCodigo">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelFechaPedido">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Fecha Pedido:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelMostrarFecha">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelEstado">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Estado:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelMostrarEstado">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelComentarios">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Comentarios:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextFieldIntroducirComentario">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelProducto">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Producto:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxProducto">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="198">
+                        <StringItem index="0" value="Abelia Floribunda"/>
+                        <StringItem index="1" value="Acer Negundo"/>
+                        <StringItem index="2" value="Acer platanoides"/>
+                        <StringItem index="3" value="Acer Pseudoplatanus"/>
+                        <StringItem index="4" value="Ajedrea"/>
+                        <StringItem index="5" value="Albaricoquero"/>
+                        <StringItem index="6" value="Albaricoquero Corbato"/>
+                        <StringItem index="7" value="Albaricoquero Kurrot"/>
+                        <StringItem index="8" value="Albaricoquero Moniqui"/>
+                        <StringItem index="9" value="Albaricoquero"/>
+                        <StringItem index="10" value="Arbustos Mix Maceta"/>
+                        <StringItem index="11" value="Archontophoenix Cunninghamiana"/>
+                        <StringItem index="12" value="Azad&#xf3;n"/>
+                        <StringItem index="13" value="Beucarnea Recurvata"/>
+                        <StringItem index="14" value="Bismarckia Nobilis"/>
+                        <StringItem index="15" value="Bougamvillea roja, naranja"/>
+                        <StringItem index="16" value="Bougamvillea Sanderiana"/>
+                        <StringItem index="17" value="Bougamvillea Sanderiana Espaldera"/>
+                        <StringItem index="18" value="Bougamvillea Sanderiana Tutor"/>
+                        <StringItem index="19" value="Brahea Armata"/>
+                        <StringItem index="20" value="Brahea Edulis"/>
+                        <StringItem index="21" value="Brachychiton Acerifolius"/>
+                        <StringItem index="22" value="Brachychiton Discolor"/>
+                        <StringItem index="23" value="Brachychiton Rupestris"/>
+                        <StringItem index="24" value="Butia Capitata"/>
+                        <StringItem index="25" value="Calamondin Copa"/>
+                        <StringItem index="26" value="Calamondin Copa EXTRA Con FRUTA"/>
+                        <StringItem index="27" value="Calamondin Mini"/>
+                        <StringItem index="28" value="Callistemom (Mix)"/>
+                        <StringItem index="29" value="Callistemom COPA"/>
+                        <StringItem index="30" value="Camelia Blanco"/>
+                        <StringItem index="31" value="Camelia japonica"/>
+                        <StringItem index="32" value="Camelia japonica ejemplar"/>
+                        <StringItem index="33" value="Cassia Corimbosa"/>
+                        <StringItem index="34" value="Cedrus Deodara"/>
+                        <StringItem index="35" value="Cedrus Deodara &quot;Feeling Blue&quot; Novedad"/>
+                        <StringItem index="36" value="Ce rezo"/>
+                        <StringItem index="37" value="Cerezo Burlat"/>
+                        <StringItem index="38" value="Cerezo Napole&#xf3;n"/>
+                        <StringItem index="39" value="Cerezo Picota"/>
+                        <StringItem index="40" value="Chamaerops Humilis"/>
+                        <StringItem index="41" value="Chamaerops Humilis &quot;Cerifera&quot;"/>
+                        <StringItem index="42" value="Chrysalidocarpus Lutescens -ARECA"/>
+                        <StringItem index="43" value="Chrysler Rojo"/>
+                        <StringItem index="44" value="Chitalpa Summer Bells"/>
+                        <StringItem index="45" value="Ciruelo"/>
+                        <StringItem index="46" value="Ciruelo Claudia Negra"/>
+                        <StringItem index="47" value="Ciruelo Friar"/>
+                        <StringItem index="48" value="Ciruelo Golden Japan"/>
+                        <StringItem index="49" value="Ciruelo R. Claudia Verde"/>
+                        <StringItem index="50" value="Ciruelo Reina C. De Ollins"/>
+                        <StringItem index="51" value="Ciruelo Santa Rosa"/>
+                        <StringItem index="52" value="Cordyline Australis -DRACAENA"/>
+                        <StringItem index="53" value="Corylus Avellana &quot;Contorta&quot;"/>
+                        <StringItem index="54" value="Dracaena Drago"/>
+                        <StringItem index="55" value="Erytrina Kafra"/>
+                        <StringItem index="56" value="Escallonia (Mix)"/>
+                        <StringItem index="57" value="Evonimus Emerald Gayeti"/>
+                        <StringItem index="58" value="Evonimus Pulchellus"/>
+                        <StringItem index="59" value="Eucalyptus Citriodora"/>
+                        <StringItem index="60" value="Eucalyptus Ficifolia"/>
+                        <StringItem index="61" value="Expositor &#xe1;rboles borde del mar"/>
+                        <StringItem index="62" value="Expositor &#xe1;rboles clima continental"/>
+                        <StringItem index="63" value="Expositor &#xe1;rboles clima mediterr&#xe1;neo"/>
+                        <StringItem index="64" value="Expositor C&#xed;tricos Mix"/>
+                        <StringItem index="65" value="Expositor Mimosa Semilla Mix"/>
+                        <StringItem index="66" value="Forsytia Intermedia &quot;Lynwood&quot;"/>
+                        <StringItem index="67" value="Granado"/>
+                        <StringItem index="68" value="Granado Mollar de Elche"/>
+                        <StringItem index="69" value="Hibiscus Syriacus  &quot;Diana&quot; -Blanco Puro"/>
+                        <StringItem index="70" value="Hibiscus Syriacus  &quot;Helene&quot; -Blanco-C.rojo"/>
+                        <StringItem index="71" value="Hibiscus Syriacus  &quot;Pink Giant&quot; Rosa"/>
+                        <StringItem index="72" value="Hibiscus Syriacus  Var. Injertadas 1 Tallo"/>
+                        <StringItem index="73" value="Higuera"/>
+                        <StringItem index="74" value="Higuera Breva"/>
+                        <StringItem index="75" value="Higuera Napolitana"/>
+                        <StringItem index="76" value="Higuera Verdal"/>
+                        <StringItem index="77" value="Juniperus Chinensis Stricta"/>
+                        <StringItem index="78" value="Juniperus chinensis &quot;Blue Alps&quot;"/>
+                        <StringItem index="79" value="Juniperus horizontalis Wiltonii"/>
+                        <StringItem index="80" value="Juniperus squamata &quot;Blue Star&quot;"/>
+                        <StringItem index="81" value="Juniperus x media Phitzeriana verde"/>
+                        <StringItem index="82" value="Jubaea Chilensis"/>
+                        <StringItem index="83" value="Kaki"/>
+                        <StringItem index="84" value="Kaki Rojo Brillante"/>
+                        <StringItem index="85" value="Kordes Perfect bicolor rojo-amarillo"/>
+                        <StringItem index="86" value="Kunquat"/>
+                        <StringItem index="87" value="Kunquat  EXTRA con FRUTA"/>
+                        <StringItem index="88" value="Lagunaria patersonii  calibre 8/10"/>
+                        <StringItem index="89" value="Lagunaria Patersonii"/>
+                        <StringItem index="90" value="Landora Amarillo"/>
+                        <StringItem index="91" value="Laurus Nobilis Arbusto - Ramificado Bajo"/>
+                        <StringItem index="92" value="Lav&#xe1;ndula Dentata"/>
+                        <StringItem index="93" value="Leptospermum COPA"/>
+                        <StringItem index="94" value="Leptospermum formado PIRAMIDE"/>
+                        <StringItem index="95" value="Limonero -Plant&#xf3;n joven"/>
+                        <StringItem index="96" value="Limonero 2 a&#xf1;os injerto"/>
+                        <StringItem index="97" value="Limonero 30/40"/>
+                        <StringItem index="98" value="Limonero calibre 8/10"/>
+                        <StringItem index="99" value="Livistonia Australis"/>
+                        <StringItem index="100" value="Livistonia Decipiens"/>
+                        <StringItem index="101" value="Lonicera Nitida"/>
+                        <StringItem index="102" value="Lonicera Nitida &quot;Maigrum&quot;"/>
+                        <StringItem index="103" value="Lonicera Pileata"/>
+                        <StringItem index="104" value="Manzano"/>
+                        <StringItem index="105" value="Manzano Golden Delicious"/>
+                        <StringItem index="106" value="Manzano Reineta"/>
+                        <StringItem index="107" value="Manzano Starking Delicious"/>
+                        <StringItem index="108" value="Margarita blanca"/>
+                        <StringItem index="109" value="Margarita rosa"/>
+                        <StringItem index="110" value="Margarita amarilla"/>
+                        <StringItem index="111" value="Margarita roja"/>
+                        <StringItem index="112" value="Margarita violeta"/>
+                        <StringItem index="113" value="Margarita azul"/>
+                        <StringItem index="114" value="Margarita mix"/>
+                        <StringItem index="115" value="Mandarino calibre 8/10"/>
+                        <StringItem index="116" value="Mandarino -Plant&#xf3;n joven"/>
+                        <StringItem index="117" value="Mandarino 2 a&#xf1;os injerto"/>
+                        <StringItem index="118" value="Mimosa DEALBATA Gaulois Astier"/>
+                        <StringItem index="119" value="Mimosa Injerto CLASICA Dealbata"/>
+                        <StringItem index="120" value="Mimosa Semilla Bayleyana"/>
+                        <StringItem index="121" value="Mimosa Semilla Cyanophylla"/>
+                        <StringItem index="122" value="Mimosa Semilla Espectabilis"/>
+                        <StringItem index="123" value="Mimosa Semilla Floribunda 4 estaciones"/>
+                        <StringItem index="124" value="Mimosa Semilla Longifolia"/>
+                        <StringItem index="125" value="Membrillero"/>
+                        <StringItem index="126" value="Membrillero Gigante de Wranja"/>
+                        <StringItem index="127" value="Melissa"/>
+                        <StringItem index="128" value="Melocotonero"/>
+                        <StringItem index="129" value="Melocotonero Amarillo de Agosto"/>
+                        <StringItem index="130" value="Melocotonero Federica"/>
+                        <StringItem index="131" value="Melocotonero Paraguayo"/>
+                        <StringItem index="132" value="Melocotonero Spring Crest"/>
+                        <StringItem index="133" value="Mentha Sativa"/>
+                        <StringItem index="134" value="Mejorana"/>
+                        <StringItem index="135" value="Mimosa Semilla"/>
+                        <StringItem index="136" value="Mimosa"/>
+                        <StringItem index="137" value="Moniqui"/>
+                        <StringItem index="138" value="Naranjo -Plant&#xf3;n joven 1 a&#xf1;o injerto"/>
+                        <StringItem index="139" value="Naranjo 2 a&#xf1;os injerto"/>
+                        <StringItem index="140" value="Naranjo calibre 8/10"/>
+                        <StringItem index="141" value="Nectarina"/>
+                        <StringItem index="142" value="N&#xed;spero"/>
+                        <StringItem index="143" value="N&#xed;spero Tanaca"/>
+                        <StringItem index="144" value="Nogal"/>
+                        <StringItem index="145" value="Nogal Com&#xf3;n"/>
+                        <StringItem index="146" value="Olea-Olivos"/>
+                        <StringItem index="147" value="Parra Uva de Mesa"/>
+                        <StringItem index="148" value="Peral"/>
+                        <StringItem index="149" value="Peral Blanq. de Aranjuez"/>
+                        <StringItem index="150" value="Peral Castell"/>
+                        <StringItem index="151" value="Peral Conference"/>
+                        <StringItem index="152" value="Peral Williams"/>
+                        <StringItem index="153" value="Petrosilium Hortense (Peregil)"/>
+                        <StringItem index="154" value="Philadelphus &quot;Virginal&quot;"/>
+                        <StringItem index="155" value="Phoenix Canariensis"/>
+                        <StringItem index="156" value="Phylostachys aurea"/>
+                        <StringItem index="157" value="Phylostachys Bambusa Spectabilis"/>
+                        <StringItem index="158" value="Phylostachys biseti"/>
+                        <StringItem index="159" value="Pitimini rojo"/>
+                        <StringItem index="160" value="Pinus Canariensis"/>
+                        <StringItem index="161" value="Pinus Halepensis"/>
+                        <StringItem index="162" value="Pinus Pinea -Pino Pi&#xf1;onero"/>
+                        <StringItem index="163" value="Platanus Acerifolia"/>
+                        <StringItem index="164" value="Pleioblastus distichus-Bamb&#xfa; enano"/>
+                        <StringItem index="165" value="Prunus pisardii"/>
+                        <StringItem index="166" value="Rastrillo de Jardin"/>
+                        <StringItem index="167" value="Rhaphis Excelsa"/>
+                        <StringItem index="168" value="Rhaphis Humilis"/>
+                        <StringItem index="169" value="Robinia Pseudoacacia Casque Rouge"/>
+                        <StringItem index="170" value="Rosal bajo 1&#xaa; -En maceta-inicio brotaci&#xf3;n"/>
+                        <StringItem index="171" value="Rosal copa"/>
+                        <StringItem index="172" value="Rose Gaujard bicolor blanco-rojo"/>
+                        <StringItem index="173" value="Roundelay rojo fuerte"/>
+                        <StringItem index="174" value="Sabal Minor"/>
+                        <StringItem index="175" value="Salix Babylonica  Pendula"/>
+                        <StringItem index="176" value="Salvia Mix"/>
+                        <StringItem index="177" value="Santolina Chamaecyparys"/>
+                        <StringItem index="178" value="Sasa palmata"/>
+                        <StringItem index="179" value="Sesbania Punicea"/>
+                        <StringItem index="180" value="Sierra de Poda 400MM"/>
+                        <StringItem index="181" value="Solanum Jazminoide"/>
+                        <StringItem index="182" value="Soraya Naranja"/>
+                        <StringItem index="183" value="Thujia orientalis &quot;Aurea nana&quot;"/>
+                        <StringItem index="184" value="Thymus Citriodra (Tomillo lim&#xf3;n)"/>
+                        <StringItem index="185" value="Thymus Vulgaris"/>
+                        <StringItem index="186" value="Tecoma Stands"/>
+                        <StringItem index="187" value="Thuja Esmeralda"/>
+                        <StringItem index="188" value="Tuja Occidentalis Woodwardii"/>
+                        <StringItem index="189" value="Viburnum Tinus &quot;Eve Price&quot;"/>
+                        <StringItem index="190" value="Washingtonia Robusta"/>
+                        <StringItem index="191" value="Weigelia &quot;Bristol Ruby&quot;"/>
+                        <StringItem index="192" value="Wisteria Sinensis  azul"/>
+                        <StringItem index="193" value="Wisteria Sinensis blanca"/>
+                        <StringItem index="194" value="Wisteria Sinensis INJERTADAS DEC&#xd3;"/>
+                        <StringItem index="195" value="Wisteria Sinensis rosa"/>
+                        <StringItem index="196" value="Yucca Jewel"/>
+                        <StringItem index="197" value="Zamia Furfuracaea"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelCantidad">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Cantidad:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelCodCliente">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="C&#xf3;digo Cliente:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextFieldIntroducirCliente">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxCantidad">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="101">
+                        <StringItem index="0" value="1"/>
+                        <StringItem index="1" value="2"/>
+                        <StringItem index="2" value="3"/>
+                        <StringItem index="3" value="4"/>
+                        <StringItem index="4" value="5"/>
+                        <StringItem index="5" value="6"/>
+                        <StringItem index="6" value="7"/>
+                        <StringItem index="7" value="8"/>
+                        <StringItem index="8" value="9"/>
+                        <StringItem index="9" value="10"/>
+                        <StringItem index="10" value="11"/>
+                        <StringItem index="11" value="12"/>
+                        <StringItem index="12" value="13"/>
+                        <StringItem index="13" value="14"/>
+                        <StringItem index="14" value="15"/>
+                        <StringItem index="15" value="16"/>
+                        <StringItem index="16" value="17"/>
+                        <StringItem index="17" value="18"/>
+                        <StringItem index="18" value="19"/>
+                        <StringItem index="19" value="20"/>
+                        <StringItem index="20" value="21"/>
+                        <StringItem index="21" value="22"/>
+                        <StringItem index="22" value="23"/>
+                        <StringItem index="23" value="24"/>
+                        <StringItem index="24" value="25"/>
+                        <StringItem index="25" value="26"/>
+                        <StringItem index="26" value="27"/>
+                        <StringItem index="27" value="28"/>
+                        <StringItem index="28" value="29"/>
+                        <StringItem index="29" value="30"/>
+                        <StringItem index="30" value="31"/>
+                        <StringItem index="31" value="32"/>
+                        <StringItem index="32" value="33"/>
+                        <StringItem index="33" value="34"/>
+                        <StringItem index="34" value="35"/>
+                        <StringItem index="35" value="36"/>
+                        <StringItem index="36" value="37"/>
+                        <StringItem index="37" value="38"/>
+                        <StringItem index="38" value="39"/>
+                        <StringItem index="39" value="40"/>
+                        <StringItem index="40" value="41"/>
+                        <StringItem index="41" value="42"/>
+                        <StringItem index="42" value="43"/>
+                        <StringItem index="43" value="44"/>
+                        <StringItem index="44" value="45"/>
+                        <StringItem index="45" value="46"/>
+                        <StringItem index="46" value="47"/>
+                        <StringItem index="47" value="48"/>
+                        <StringItem index="48" value="49"/>
+                        <StringItem index="49" value="50"/>
+                        <StringItem index="50" value="51"/>
+                        <StringItem index="51" value="52"/>
+                        <StringItem index="52" value="53"/>
+                        <StringItem index="53" value="54"/>
+                        <StringItem index="54" value="55"/>
+                        <StringItem index="55" value="56"/>
+                        <StringItem index="56" value="57"/>
+                        <StringItem index="57" value="58"/>
+                        <StringItem index="58" value="59"/>
+                        <StringItem index="59" value="60"/>
+                        <StringItem index="60" value="61"/>
+                        <StringItem index="61" value="62"/>
+                        <StringItem index="62" value="63"/>
+                        <StringItem index="63" value="64"/>
+                        <StringItem index="64" value="65"/>
+                        <StringItem index="65" value="66"/>
+                        <StringItem index="66" value="67"/>
+                        <StringItem index="67" value="68"/>
+                        <StringItem index="68" value="69"/>
+                        <StringItem index="69" value="70"/>
+                        <StringItem index="70" value="71"/>
+                        <StringItem index="71" value="72"/>
+                        <StringItem index="72" value="73"/>
+                        <StringItem index="73" value="74"/>
+                        <StringItem index="74" value="75"/>
+                        <StringItem index="75" value="76"/>
+                        <StringItem index="76" value="77"/>
+                        <StringItem index="77" value="78"/>
+                        <StringItem index="78" value="79"/>
+                        <StringItem index="79" value="80"/>
+                        <StringItem index="80" value="81"/>
+                        <StringItem index="81" value="82"/>
+                        <StringItem index="82" value="83"/>
+                        <StringItem index="83" value="84"/>
+                        <StringItem index="84" value="85"/>
+                        <StringItem index="85" value="86"/>
+                        <StringItem index="86" value="87"/>
+                        <StringItem index="87" value="88"/>
+                        <StringItem index="88" value="89"/>
+                        <StringItem index="89" value="90"/>
+                        <StringItem index="90" value="91"/>
+                        <StringItem index="91" value="92"/>
+                        <StringItem index="92" value="93"/>
+                        <StringItem index="93" value="94"/>
+                        <StringItem index="94" value="95"/>
+                        <StringItem index="95" value="96"/>
+                        <StringItem index="96" value="97"/>
+                        <StringItem index="97" value="98"/>
+                        <StringItem index="98" value="99"/>
+                        <StringItem index="99" value="100"/>
+                        <StringItem index="100" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelBtnAnadirProducto">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="34" green="b3" red="8d" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="A&#xf1;adir Producto"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Hand Cursor"/>
+                    </Property>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[140, 25]"/>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[140, 25]"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[140, 25]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnAnadirProductoMouseClicked"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnAnadirProductoMouseEntered"/>
+                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnAnadirProductoMouseExited"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelBtnGenerarPedido">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="34" green="b3" red="8d" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="Generar Pedido"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Hand Cursor"/>
+                    </Property>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[140, 25]"/>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[140, 25]"/>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[140, 25]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnGenerarPedidoMouseClicked"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnGenerarPedidoMouseEntered"/>
+                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBtnGenerarPedidoMouseExited"/>
+                  </Events>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTable" name="jTableMostrarProductos">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="5" rowCount="4">
+                            <Column editable="true" title="Linea" type="java.lang.Object"/>
+                            <Column editable="true" title="Cod. Producto" type="java.lang.Object"/>
+                            <Column editable="true" title="Cantidad" type="java.lang.Object"/>
+                            <Column editable="true" title="Precio UD." type="java.lang.Object"/>
+                            <Column editable="true" title="Precio Total" type="java.lang.Object"/>
+                          </Table>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                          </TableColumnModel>
+                        </Property>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

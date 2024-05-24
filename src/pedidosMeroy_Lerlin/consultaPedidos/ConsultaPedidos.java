@@ -93,7 +93,7 @@ public class ConsultaPedidos extends javax.swing.JFrame {
 
         Connection conn = Conexion.getConnection();
         if (conn == null) {
-            // Manejar el error de conexión
+             JOptionPane.showMessageDialog(null, "No se pudo establecer conexión con la base de datos.", "Error de conexión", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
